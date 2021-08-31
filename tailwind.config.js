@@ -1,11 +1,11 @@
 module.exports = {
   purge: {
-    enabled: process.env.NODE_ENV === 'production' ? true : false,
+    enabled: process.env.NODE_ENV === 'production',
     content: [
       './src/**/*.html',
       './src/**/*.jsx',
-      './src/**/*.js'
-    ]
+      './src/**/*.js',
+    ],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -15,4 +15,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
