@@ -33,6 +33,7 @@ module.exports = {
       BUTTON_FILLED: "#EDF2F7",
       INPUT_COLOR: "#6F798B",
       BLACK: "#0B0C0E",
+      UPLOAD_COLOR: "#F2F5FA",
       INPUT_ERROR: "#E02020",
 
       NEUTRAL: {
