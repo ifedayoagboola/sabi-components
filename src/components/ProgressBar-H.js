@@ -18,8 +18,8 @@ ProgressBar.propTypes = {
     value: PropTypes.number.isRequired,
     max: PropTypes.number,
     color: PropTypes.string,
-    width: PropTypes.string
-  };
+    width: PropTypes.string 
+  }; 
   
   ProgressBar.defaultProps = {
     max: 100,
