@@ -24,7 +24,7 @@ ProgressBar.propTypes = {
   ProgressBar.defaultProps = {
     max: 100,
     color: "lightBlue",
-    width: "50%",
+    width: "50",
     value:60
   };
 

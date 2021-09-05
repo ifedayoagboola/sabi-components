@@ -65,15 +65,29 @@ import styled from "styled-components";
 `;
  const CircularProgressBarWrapper = styled.div`  
  .progress-value{
-  //  color: green;
-   margin-left: -12px;
+  position: relative;
+  z-index: 90;
+  font-size:${(props) => props.progressValueSize};
+  margin-left :${(props) => props.progressValueMargin};
+  color :${(props) => props.progressValueColor};
+
  }
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin:0;
-  // background:red
 `;
+//  const CircularProgressBarWrapper = styled.div`  
+//  .progress-value{
+//   //  color: green;
+//    margin-left: -12px;
+//  }
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin:0;
+//   // background:red
+// `;
 
  
 export default {  ProgressBarContainer, SvgViewContainer, Circle,SpinnerViewContainer,CircularProgressBarWrapper };
