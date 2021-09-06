@@ -77,7 +77,7 @@ export default function Spinner(
     strokeWidth: "2",
     value: "200",
     progress: "20", 
-    containerSize: "190px",
+    containerSize: "195px",
     backgroundColor:"#E2E9F0",
     color:"blue"
  }

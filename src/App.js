@@ -19,23 +19,25 @@ function App() {
       containerSize="70px" 
       color="red" 
       textMargin="-6px" 
-      textSize="10px"/>
+      textSize="10px"
+      />
 
       <ProgressBar 
       backGround 
       width="50vw" 
       value="50" 
-      height="5px" 
+      height="10px" 
       progressBackgroundColor="pink"
       progressColor="blue"
-      progressValueColor="blue"
-      progressValueSize="15px"
+      progressValueColor="red"
+      progressValueSize="10px"
+      showText = "true"
       />
 
       <Spinner 
       backgroundColor="green" 
       color="pink" 
-      containerSize="80px"
+      containerSize="180px"
       height="fit-content"
       width="fit-content"
       />
