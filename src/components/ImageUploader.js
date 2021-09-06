@@ -1,25 +1,28 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import { redTrash, addCircle } from "../assets/icons";
+// /* eslint-disable jsx-a11y/label-has-associated-control */
+ import React, { useState } from "react";
+ import { redTrash, addCircle } from "../assets/icons";
+ 
+ const ImageUploader = () => {
+   const [selectedImages, setSelectedImages] = useState([]);
+   
+   const imageHandleChange = (e) => {
+     if (e.target.files) {
+       const fileArray = Array.from(e.target.files).map((file) =>
+       URL.createObjectURL(file)
+       );
+       setSelectedImages((prevImages) => prevImages.concat(fileArray));
+       Array.from(e.target.files).map((file) => URL.revokeObjectURL(file));
+      }
+    };
+    
+    const deletePreviewImage = (image) => {
+      const newArray = selectedImages.filter((item) => item !== image);
+      setSelectedImages(newArray);
+    };
 
-const ImageUploader = () => {
-  const [selectedImages, setSelectedImages] = useState([]);
-
-  const imageHandleChange = (e) => {
-    if (e.target.files) {
-      const fileArray = Array.from(e.target.files).map((file) =>
-        URL.createObjectURL(file)
-      );
-      setSelectedImages((prevImages) => prevImages.concat(fileArray));
-      Array.from(e.target.files).map((file) => URL.revokeObjectURL(file));
-    }
-  };
-
-  const deletePreviewImage = (image) => {
-    const newArray = selectedImages.filter((item) => item !== image);
-    setSelectedImages(newArray);
-  };
-  const renderPhotos = (source) => {
+    /* eslint-disable arrow-body-style */
+    /* eslint-disable react/jsx-key */
+    const renderPhotos = (source) => {
     return source.map((photo) => {
       return (
         <div className="ml-4 bg-UPLOAD_COLOR w-20 border h-20 rounded cursor-pointer relative">
