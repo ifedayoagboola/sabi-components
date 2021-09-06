@@ -1,7 +1,10 @@
+import React from "react";
+import Routers from "./router";
+
 function App() {
 	return (
 		<div className="App">
-			<h1>Sabi-Agent Web</h1>
+			<Routers />
 		</div>
 	);
 }
