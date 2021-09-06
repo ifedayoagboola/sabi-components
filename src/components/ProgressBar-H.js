@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styledComponents from '../styledComponents';
+import styledComponents from './styledComponents';
 
 export default function ProgressBar({ value, max, progressColor,progressBackgroundColor,progressValueColor,progressValueSize, width,height}) {
     return (
