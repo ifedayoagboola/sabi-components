@@ -3,34 +3,49 @@ import styled from "styled-components";
  const ProgressBarContainer = styled.div` 
   progress {
     margin-right: 8px;
+  };
+  .progressValue{
+    color: ${(props)=> props.progressValueColor};
+    font-size: ${(props)=>props.progressValueSize};
+    margin-top: -8px;
+    // background-color:red;
   }
-
   progress[value] {
-    width: ${(props) => props.width};
+    width: ${(props) => props.progressWidth};
 
     -webkit-appearance: none;
     appearance: none;
   }
 
   progress[value]::-webkit-progress-bar {
-    height: 10px; 
+    height: ${(props) => props.progressHeight}; 
     border-radius: 20px;
-    background-color: #eee;
+    background-color: ${(props)=> props.progressBackgroundColor};
   }
 
   progress[value]::-webkit-progress-value {
-    height: 10px; 
+    height: ${(props) => props.progressHeight}; 
     border-radius: 20px;
     background-color: ${(props) => props.color};
   }
-`;
- const SvgViewContainer = styled.svg` 
+  display:flex;
+  align-items: center;
+  // background-color:red;
+  width:fit-content;
+  height:fit-content;
+  
+  height: ${(props)=> props.progressHeight};
+  `;
+  const SvgViewContainer = styled.svg` 
   height: ${(props) => props.height};
   width: ${(props) => props.width};
-`;
- const SpinnerViewContainer = styled.svg` 
+  
+  `;
+  const SpinnerViewContainer = styled.svg` 
+  // background-color:red;
   height: ${(props) => props.height};
   width: ${(props) => props.width};
+  
   animation: rotate 2s linear infinite;
   & .progress {
     animation: dash 1.5s ease-in-out infinite;
@@ -77,17 +92,6 @@ import styled from "styled-components";
   justify-content: center;
   margin:0;
 `;
-//  const CircularProgressBarWrapper = styled.div`  
-//  .progress-value{
-//   //  color: green;
-//    margin-left: -12px;
-//  }
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   margin:0;
-//   // background:red
-// `;
 
  
 export default {  ProgressBarContainer, SvgViewContainer, Circle,SpinnerViewContainer,CircularProgressBarWrapper };

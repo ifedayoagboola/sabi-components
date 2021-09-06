@@ -3,13 +3,19 @@ import PropTypes from 'prop-types';
 
 import styledComponents from '../styledComponents';
 
-export default function ProgressBar({ value, max, color, width}) {
+export default function ProgressBar({ value, max, progressColor,progressBackgroundColor,progressValueColor,progressValueSize, width,height}) {
     return (
-        <styledComponents.ProgressBarContainer color={color} width={width}>
+        <styledComponents.ProgressBarContainer 
+        color={progressColor} 
+        progressBackgroundColor={progressBackgroundColor} 
+        progressWidth = {width} progressHeight={height}
+        progressValueColor={progressValueColor}
+        progressValueSize={progressValueSize}
+        >
             <progress value={value} max={max}>
 
             </progress>
-            <span>{value}%</span>
+            <span className="progressValue">{value}%</span>
         </styledComponents.ProgressBarContainer>
     )
 }
@@ -17,14 +23,22 @@ export default function ProgressBar({ value, max, color, width}) {
 ProgressBar.propTypes = {
     value: PropTypes.number.isRequired,
     max: PropTypes.number,
-    color: PropTypes.string,
-    width: PropTypes.string 
+    progressColor: PropTypes.string,
+    width: PropTypes.string, 
+    height: PropTypes.string, 
+    progressBackgroundColor: PropTypes.string, 
+    progressValueColor: PropTypes.string, 
+    progressValueSize: PropTypes.string, 
   }; 
   
   ProgressBar.defaultProps = {
     max: 100,
-    color: "lightBlue",
+    progressColor: "lightBlue",
     width: "50",
-    value:60
+    value:60,
+    height:"8px",
+    progressBackgroundColor:"#eee",
+    progressValueColor:"#000",
+    progressValueSize:"12px",
   };
 

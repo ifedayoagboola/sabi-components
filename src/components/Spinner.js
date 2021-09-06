@@ -3,14 +3,52 @@ import propTypes from 'prop-types';
 import styledComponents from '../styledComponents';
 
 
-export default function Spinner({containerSize,height, width, r, cy, cx, fill, strokeWidth, value,progress, backgroundColor, color}) { 
+export default function Spinner(
+    {
+        containerSize,
+        height, 
+        width, 
+        r, 
+        cy, 
+        cx, 
+        fill, 
+        strokeWidth, 
+        value,
+        progress, 
+        backgroundColor, 
+        color
+    }
+) { 
     return (
         <div className="circle" style={{width:`${containerSize}`}}>
-          <styledComponents.SpinnerViewContainer viewBox="0 0 100 100" width={width} height={height} className="circle-item">
-              <styledComponents.Circle cx={cx} cy={cy} r={r} fill={fill} stroke={backgroundColor} strokeWidth={strokeWidth} strokeDasharray={value} strokeDashoffset={value-value}/>
-              <styledComponents.Circle className="progress" cx={cx} cy={cy} r={r} fill={fill} stroke={color} strokeWidth={strokeWidth} strokeDasharray={value} strokeDashoffset={value - ((progress/100)*value)} strokeLinecap="round"/>
-            </styledComponents.SpinnerViewContainer> 
-            {/* <span>{progress}%</span> */}
+          <styledComponents.SpinnerViewContainer 
+          viewBox="0 0 100 100" 
+          width={width} 
+          height={height} 
+          className="circle-item">
+              <styledComponents.Circle 
+              cx={cx} 
+              cy={cy} 
+              r={r} 
+              fill={fill} 
+              stroke={backgroundColor} 
+              strokeWidth={strokeWidth} 
+              strokeDasharray={value} 
+              strokeDashoffset={value-value}
+              />
+              <styledComponents.Circle 
+              className="progress" 
+              cx={cx} 
+              cy={cy} 
+              r={r} 
+              fill={fill} 
+              stroke={color} 
+              strokeWidth={strokeWidth} 
+              strokeDasharray={value} 
+              strokeDashoffset={value - ((progress/100)*value)} 
+              strokeLinecap="round"
+              />
+        </styledComponents.SpinnerViewContainer> 
         </div>
     )
 }
