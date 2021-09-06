@@ -6,7 +6,7 @@ import Color from "./constants/colors"
 /* eslint-disable no-underscore-dangle */
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
       <h1>Sabi-Agent Web</h1>
 
       <ProgressCircularBar 
@@ -19,7 +19,7 @@ function App() {
       containerSize="70px" 
       color="red" 
       textMargin="-6px" 
-      textSize="11px"/>
+      textSize="10px"/>
 
       <ProgressBar 
       backGround 
