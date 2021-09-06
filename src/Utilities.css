@@ -1,0 +1,80 @@
+/* Button styles */
+.btn {
+	outline: none;
+	color: #fff;
+	font-family: DM Sans;
+	font-style: normal;
+	letter-spacing: 0em;
+	text-align: center;
+	border-radius: 4px;
+	background: #227eff;
+}
+.sec {
+	padding: 7px, 24px;
+	border: 1px solid #227eff;
+	background: #fff;
+	color: #227eff;
+}
+.btn:hover {
+	background: #0064f0;
+}
+.btn:focus {
+	background: #0350bb;
+}
+.sec:hover {
+	background: none;
+	border: 1px solid #0064f0;
+	color: #0064f0;
+}
+.sec:focus {
+	background: none;
+	border: 1px solid #0350bb;
+	color: #0350bb;
+}
+.sm {
+	height: 32px;
+	width: 104px;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 18px;
+}
+.md {
+	height: 48px;
+	width: 123px;
+	font-size: 16px;
+	line-height: 24px;
+}
+.big {
+	height: 56px;
+	width: 342px;
+}
+.lg {
+	height: 72px;
+	width: 342px;
+	font-weight: 700;
+	line-height: 30px;
+	font-size: 20px;
+}
+.sec .md {
+	height: 48px;
+	width: 123px;
+	padding: 12px, 24px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.sec .big {
+	height: 56px;
+	width: 342px;
+	padding: 16px, 134px;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.disabled {
+	background: #a6cbff;
+}
+.sec .disabled {
+	border: 1px solid #a6cbff;
+	color: #a6cbff;
+}

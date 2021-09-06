@@ -1,10 +1,7 @@
-import styled from "styled-components";
-
 export const PryBtnSm = styled.button`
 	height: 32px;
 	width: 104px;
 	outline: none;
-	background: ${({ disabled }) => (disabled ? "#A6CBFF" : "#227eff")};
 	color: #fff;
 	font-family: DM Sans;
 	font-size: 12px;
@@ -14,14 +11,14 @@ export const PryBtnSm = styled.button`
 	letter-spacing: 0em;
 	text-align: center;
 	border-radius: 4px;
-	&:hover {
+	background: ${({ disabled }) => (disabled ? "#A6CBFF" : "#227eff")};
+	button:hover {
 		background: #0064f0;
 	}
-	&:focus {
+	button:focus {
 		background: #0350bb;
 	}
 `;
-
 export const PryBtnMd = styled(PryBtnSm)`
 	height: 48px;
 	width: 123px;
