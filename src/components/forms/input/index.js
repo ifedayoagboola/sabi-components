@@ -25,10 +25,10 @@ const Input = ({
 	return (
 		<Container>
 			<InputField type={type} name={name} placeholder={placeholder} />
-			{/* <RightIcon>{righticon}</RightIcon>
+			<RightIcon position>{righticon}</RightIcon>
 			<LeftIcon>{lefticon}</LeftIcon>
 			<RightSelect>{rightselect}</RightSelect>
-			<LeftSelect>{leftselect}</LeftSelect> */}
+			<LeftSelect>{leftselect}</LeftSelect>
 			<RightLabel>{rightlabel}</RightLabel>
 			<LeftLabel>{leftlabel}</LeftLabel>
 		</Container>
