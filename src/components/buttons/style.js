@@ -7,4 +7,5 @@ const StyledButton = styled.button`
 	text-align: center;
 	border-radius: 4px;
 	background: #227eff;
+	background-color: ${({ primary }) => (primary ? "#0467FB" : "#0467FB")};
 `;

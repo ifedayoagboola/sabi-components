@@ -27,6 +27,22 @@ const LeftLabel = styled(RightLabel)`
 	left: 10px;
 	text-align: left;
 `;
+const RightIcon = styled.div`
+	left: 10px;
+	text-align: left;
+`;
+const LeftIcon = styled.div`
+	left: 10px;
+	text-align: left;
+`;
+const RightSelect = styled.div`
+	left: 10px;
+	text-align: left;
+`;
+const LeftSelect = styled.div`
+	left: 10px;
+	text-align: left;
+`;
 const InputField = styled.input`
 	outline: none;
 	font-family: DM Sans;
@@ -69,4 +85,13 @@ const InputField = styled.input`
 	}
 `;
 
-export { Container, RightLabel, LeftLabel, InputField };
+export {
+	Container,
+	RightLabel,
+	LeftLabel,
+	InputField,
+	RightIcon,
+	LeftIcon,
+	RightSelect,
+	LeftSelect,
+};
